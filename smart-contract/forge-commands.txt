@@ -1,0 +1,13 @@
+To build contract 
+
+===> forge build
+
+To Deploy the contract
+
+===> forge create <path to address:contract-name> --rpc-url <rpc of network to deploy> --private-key <private of signer> --etherscan-api-key <etherscan api key for verify contract> --verify
+
+To Deploy the contract using the script 
+
+===> forge script <path to script:contract name> --rpc-url  <rpc of network to deploy> --etherscan-api-key <etherscan api key for verify contract> --verify
+
+
