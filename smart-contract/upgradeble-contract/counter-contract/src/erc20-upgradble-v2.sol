@@ -21,16 +21,20 @@ contract VishnuV2 is
     }
 
     function initialize(address initialOwner) public initializer {
-        __ERC20_init("VishnuV2", "VT2");
+        __ERC20_init("Vishnu1", "VT1");
         __Ownable_init(initialOwner);
-        __ERC20Permit_init("VishnuV2");
+        __ERC20Permit_init("Vishnu1");
         __UUPSUpgradeable_init();
 
-        _mint(msg.sender, 2000000 * 10 ** decimals());
+        _mint(msg.sender, 1000000 * 10 ** decimals());
     }
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
+    }
+
+    function getTotalSupply() external view returns (uint256) {
+        return totalSupply();
     }
 
     function _authorizeUpgrade(

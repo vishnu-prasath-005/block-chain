@@ -20,9 +20,9 @@ contract VishnuV1 is
     }
 
     function initialize(address initialOwner) public initializer {
-        __ERC20_init("Vishnu", "VT");
+        __ERC20_init("Vishnu1", "VT1");
         __Ownable_init(initialOwner);
-        __ERC20Permit_init("Vishnu");
+        __ERC20Permit_init("Vishnu1");
         __UUPSUpgradeable_init();
 
         _mint(msg.sender, 1000000 * 10 ** decimals());
